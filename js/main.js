@@ -107,7 +107,7 @@ function startCountdown(e) {
     button.disabled = true;
 
     // Обратный счет от 5 до 0
-    for (var i = 0; i >= 0; i--) {
+    for (var i = 3; i >= 0; i--) {
         setTimeout(function (count) {
             countdownElement.innerHTML = "seconds left: " + count;
 
@@ -115,6 +115,6 @@ function startCountdown(e) {
                 button.innerHTML = `${e}`;
                 button.disabled = false;
             }
-        }, (0 - i) * 1000, i);
+        }, (3 - i) * 1000, i);
     }
 }
