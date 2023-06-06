@@ -37,7 +37,11 @@ btnPlus.addEventListener('click', () => {
             random.style.display = 'block'
 
             random.addEventListener('click', () => {
-                startCountdown('Выбрать рандомный элемент')
+                let box = document.querySelectorAll('.box')
+                for (let i = 0; i < box.length; i++) {
+                    const el = box[i];
+                    el.style.display = 'none'
+                }
                 let boxRandom = document.createElement('div')
                 boxRandom.setAttribute('class', 'box')
                 let randomIndex = Math.floor(Math.random() * data.length);
